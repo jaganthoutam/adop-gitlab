@@ -117,8 +117,7 @@ pretty_sleep() {
 
 # Check that Gitlab service has started up and is running healthily
 echo "* Waiting for GitLab to become available - this can take a few minutes"
-TOOL_SLEEP_TIME=10
-until [[ $(curl -s ${LOCAL_GITLAB_HOST}/-/health) == 'GitLab OK' ]]; do pretty_sleep ${TOOL_SLEEP_TIME} GitLab; done
+
 
 echo "----------------------------------------------------------------------------"
 echo "============================ CONFIGURING GITLAB ============================"
